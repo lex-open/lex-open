@@ -1,0 +1,45 @@
+{
+  "id": "uk.england.housing.2004.s11",
+  "jurisdiction": "England & Wales",
+  "level": "primary",
+  "legislation": {
+    "title": "Housing Act 2004",
+    "year": 2004,
+    "section": "Section 11",
+    "subsection": "",
+    "citation_url": "https://www.legislation.gov.uk/ukpga/2004/34/section/11",
+    "version_date": "2026‑04‑06",
+    "in_force": true,
+    "repealed": false,
+    "commencement_date": "2006‑01‑01"
+  },
+  "legal_concepts": {
+    "duties": [
+      "Landlord of dwelling let on assured / short assured tenancy MUST keep in repair: structure & exterior, installations for water/gas/electricity/sanitation, space heating & heating water"
+    ],
+    "rights": [
+      "Tenant entitled to works done within reasonable time",
+      "Compensation up to £4,250 available in First‑tier Tribunal Property Chamber",
+      "No requirement to prove landlord was told IF they ought reasonably to have known"
+    ],
+    "remedies": [
+      "Specific performance order",
+      "Damages / compensation",
+      "Rent abatement",
+      "Tribunal may order works without landlord consent"
+    ],
+    "time_limits": [
+      "6 years from date of breach: Limitation Act 1980 s.9"
+    ]
+  },
+  "plain_language": "If you rent a home in England/Wales your landlord is LEGALLY REQUIRED to keep the structure, roof, walls, windows, pipes, drains, electrics, boiler, heating and hot water in good working order. Applies automatically to almost all tenancies. This is a strict duty — you do not need to prove they were careless.",
+  "official_text_excerpt": "(1) The landlord is under an obligation to keep in repair—(a) the structure and exterior; (b) installations for water, gas, electricity, sanitation; (c) installations for space heating and heating water.",
+  "case_law": [
+    {"title":"O’Brien v Robinson [1973] AC 912","note":"Duty includes safety from foreseeable harm"},
+    {"title":"Southwark LBC v Tanner [2001] 1 WLR 1473","note":"Reasonable time depends on seriousness"}
+  ],
+  "tags": ["housing","landlord","repair","damp","disrepair","tenancy","wigan"],
+  "verified_by": "lexopen",
+  "verified_at": "2026‑06‑19",
+  "schema_version": "0.1"
+}
