@@ -19,7 +19,8 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: lts/* }
       - run: npx -y pagefind --site docs || true
-      - uses: actions/upload-pages-artifact@v3
+      - uses: - run: npm install marked --no-audit --no-fund --silent
+      - run: node scripts/build-pages.js && npx -y pagefind --site docs || true
         with: { path: docs }
   deploy:
     needs: build
