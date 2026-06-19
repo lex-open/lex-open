@@ -1,16 +1,9 @@
 name: 🌐 Build & Deploy Site
 on:
-  push:
-    branches: [main]
-    paths: ['docs/**']
+  push: { branches: [main], paths: ['docs/**','data/**','scripts/**','.github/workflows/publish.yml'] }
   workflow_dispatch:
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-concurrency:
-  group: pages
-  cancel-in-progress: true
+permissions: { contents: read, pages: write, id-token: write }
+concurrency: { group: pages, cancel-in-progress: true }
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,16 +11,15 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: lts/* }
+      - run: npm install marked --no-audit --no-fund --silent
+      - run: node scripts/build-pages.js
       - run: npx -y pagefind --site docs || true
-      - uses: - run: npm install marked --no-audit --no-fund --silent
-      - run: node scripts/build-pages.js && npx -y pagefind --site docs || true
+      - uses: actions/upload-pages-artifact@v3
         with: { path: docs }
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+    environment: { name: github-pages, url: ${{ steps.deploy.outputs.page_url }} }
     steps:
       - id: deploy
         uses: actions/deploy-pages@v4
