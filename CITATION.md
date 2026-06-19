@@ -1,0 +1,1 @@
+- Web: `https://lex-open.github.io/lex-open/uk-england-housing-2004-s11.html` - Data: `https://raw.githubusercontent.com/lex-open/lex-open/main/data/uk/england-wales/housing-2004/s11-landlord-repair-duty.json` Made to last **100+ years**, works no matter who hosts it in future. v0.1 · 19 June 2026 · Wigan UK
